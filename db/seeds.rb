@@ -1,4 +1,5 @@
 require "faker"
+
 User.delete_all
 List.delete_all
 Task.delete_all

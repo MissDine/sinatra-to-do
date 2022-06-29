@@ -1,5 +1,6 @@
 require_relative "./config/environment"
 require "sinatra/activerecord/rake"
+require "faker"
 
 desc "Start the server"
 task :server do  
@@ -14,6 +15,7 @@ task :server do
 
   # rerun allows auto-reloading of server when files are updated
   # -b runs in the background (include it or binding.pry won't work)
+  exec "bundle exec rake db:seed"
   exec "bundle exec rackup -p #{ENV['PORT']}"
 end
 
