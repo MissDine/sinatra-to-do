@@ -14,7 +14,7 @@ task :server do
 
   # rerun allows auto-reloading of server when files are updated
   # -b runs in the background (include it or binding.pry won't work)
-  exec "bundle exec rackup -p #{ENV['PORT']}"
+  exec "bundle exec rackup -p #{ENV['PORT']} && bundle exec rake db:seed"
 end
 
 desc "Start the console"
