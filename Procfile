@@ -1,2 +1,2 @@
-web: bundle exec rackup server
+web: bundle exec rake server
 release: bundle exec rake db:migrate
